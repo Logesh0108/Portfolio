@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form with Footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #040b14;
+    color: #333;
+}
+h2 {
+    font-size: 2.5rem;
+    color: #fec544;
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    width: 90%;
+    background: #ffffff00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+/* Form Styles */
+form {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+    border-left: 4px solid #fec544;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #040b14;
+    transition: border-color 0.3s;
+    color: white;
+    font-weight: 900;
+}
+
+input:focus, textarea:focus {
+    border-color: #fec544;
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+button {
+    background-color: #fec544;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #fec544;
+    box-shadow: 0 0 10px rgb(106, 105, 107);
+}
+
+/* Contact Info Styles */
+.contact-info {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    padding-left: 20px;
+    border-left: 2px solid #ddd;
+}
+
+.footer-address, .footer-social-media {
+    background: #040b14;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-address h5, .footer-social-media h5 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #fec544;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-address p {
+    font-size: 1.2rem;
+    color: #cdcdcd;
+    margin: 5px 0;
+    font-weight: bolder;
+}
+
+.footer-address p i {
+    margin-right: 10px;
+    color: #fec544;
+}
+.footer-address i:hover {
+    background: #ffffff;
+    color: #fec544; /* Add a color change for the icon */
+    border-radius: 50%; /* Add rounded effect */
+    padding: 5px; /* Add a slight padding */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 0 0 15px rgba(254, 197, 68, 0.5); /* Add green glow */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Social Media */
+.footer-social-media {
+    text-align: left;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: white;
+    background: #fec544;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.social-icon:hover {
+    background: #f4c850;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #040b14;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer .developer {
+    font-weight: bold;
+    color: #fec544;
+    transition: text-shadow 0.3s;
+}
+
+footer .developer:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+    
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    form, .contact-info {
+        flex: 1 1 100%;
+        text-align: left;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
+}
+
+</style>
+</head>
+
+<body>
+    <h2>Stay connected</h2>
+    <main>
+        <div class="contact-container">
+            <form action="#" method="post">
+                <h2>Say HI</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <div class="footer-address">
+                    <h5>Contact Address</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</p>
+                    <p><i class="fas fa-phone-alt"></i> +123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@example.com</p>
+                </div>
+                <div class="footer-social-media">
+                    <h5>Social Media</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 | All Rights Reserved | Designed and Developed by <span class="developer">Logesh.</span></p>
+    </footer>
+</body>
+
+</html>

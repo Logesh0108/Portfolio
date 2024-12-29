@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logesh Nalliyappan |   Software Developer</title>
+    <link rel="icon" type="image/png" href="curriculum.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+      html,body{
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+      }
+      /* Change the background color of selected text */
+::selection {
+  background-color: #fec544; /* Set background color to black */
+  color: white; /* Optional: Set text color to white for better visibility */
+  font-weight: bolder;
+  border-radius: 20px;
+
+}
+
+/* For Mozilla Firefox compatibility */
+::-moz-selection {
+  background-color: #fec544;
+  color: white;
+  border-radius: 20px;
+  font-weight: bolder;
+
+
+}
+
+       .navbar {
+       
+        color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1030; /* Ensures the navbar stays above other elements */
+  box-shadow: 0 2px 5px rgba(213, 14, 14, 0.1); /* Optional: Adds a slight shadow for better visibility */
+}
+
+.navbar {
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+    font-weight: bold;
+    color: #b5b5b5;
+    text-transform: uppercase; /* Initial state */
+    letter-spacing: 2px; /* Add spacing for uppercase */
+    transition: font-size 0.3s ease, letter-spacing 0.3s ease, color 0.3s ease;
+
+    }
+
+    .navbar-brand:hover {
+      color: #f8c146; /* Gold hover effect for brand */
+    }
+
+    .nav-link {
+      font-size: 1rem;
+      margin-right: 15px;
+      transition: color 0.3s ease;
+      font-size: 20px;
+    }
+
+    .nav-link.active:hover {
+      color: #f8c146; 
+      transition: font-size 0.3s ease, letter-spacing 0.3s ease, color 0.3s ease;
+      text-transform: uppercase;
+    }
+   
+    .nav-link.active {
+      font-weight: bold;
+ 
+      
+    }
+   
+     /* Section container */
+
+
+
+.content-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f9fa; /* Subtle background color */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Professional shadow */
+}
+
+/* Text container */
+.text-content h1 {
+  font-size: 2.5rem;
+  color: #212529; /* Default text color */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Highlighted name */
+.highlight-name {
+  color: #b67f11; /* Choose a distinct blue color */
+  font-style: italic; /* Optional: Adds emphasis */
+  font-weight: bold;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #495057; /* Subtle gray for readability */
+  animation: fadeIn 2s ease-in-out; /* Apply fade-in animation */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward motion */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Bring back to normal position */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column; /* Stacks image and text vertically */
+    padding: 20px;
+  }
+
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+}
+/* Social Media Section */
+.social-media-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap icons for responsiveness */
+  gap: 50px; /* Space between icons */
+  margin: 30px 0;
+}
+
+/* Social Icons */
+.social-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack icon and name */
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem; /* Icon size */
+  color: #495057; /* Default icon color */
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 15px; /* Add space for hover effects */
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Smooth zoom effect */
+}
+
+/* Social Icons with Circular Backgrounds */
+.social-icon i {
+  font-size: 3rem; /* Larger icon size */
+  background-color: #f1f1f1; /* Subtle background for icon */
+  border-radius: 50%; /* Circular background */
+  padding: 15px;
+  transition: all 0.4s ease; /* Smooth transitions for icon */
+}
+
+/* Platform Names */
+.platform-name {
+  font-size: 1rem;
+  color: #495057; /* Neutral text color */
+  opacity: 0; /* Hidden by default */
+  visibility: hidden;
+  transform: translateY(15px); /* Position below the icon */
+  transition: all 0.4s ease; /* Smooth slide and fade */
+  margin-top: 10px;
+}
+
+/* Show platform name on hover */
+.social-icon:hover .platform-name {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Move into view */
+}
+
+/* Add individual platform colors for icons */
+.whatsapp i {
+  color: #25D366; /* WhatsApp green */
+}
+
+.instagram i {
+  color: #E1306C; /* Instagram pink */
+}
+
+.linkedin i {
+  color: #0A66C2; /* LinkedIn blue */
+}
+
+.github i {
+  color: #171515; /* GitHub black */
+}
+
+.gmail i {
+  color: #D44638; /* Gmail red */
+}
+
+/* Add hover background and border effect */
+.social-icon:hover {
+  border: 2px solid #ccc;
+  border-radius: 10px; /* Rounded edges for hover box */
+  padding: 20px;
+  background-color: #f9f9f9; /* Subtle background on hover */
+}
+
+.social-icon:hover i {
+  background-color: #e0e0e0; /* Slightly darker background on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .social-media-section {
+    gap: 30px; /* Reduce gap between icons */
+  }
+
+  .social-icon i {
+    font-size: 2.5rem; /* Slightly smaller icons */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .platform-name {
+    font-size: 0.9rem; /* Slightly smaller platform name */
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icon i {
+    font-size: 2rem; /* Smaller icons for small screens */
+  }
+
+  .platform-name {
+    font-size: 0.8rem; /* Adjust name size */
+  }
+}
+.aboutme{
+  text-align: center;
+  justify-content: center;
+}
+.Profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 50px auto;
+  max-width: 80%; /* Center the content */
+  padding: 34px;
+  overflow: hidden;
+}
+
+/* Profile Image Styling */
+.Profile img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateX(-100px); /* Start off-screen for animation */
+  animation: slideInLeft 1s ease-out forwards; /* Scrolling animation */
+}
+
+/* Description Styling */
+.Description {
+  flex: 1;
+  animation: fadeIn 1.5s ease-out forwards; /* Scrolling animation */
+  transform: translateY(30px); /* Start slightly lower for animation */
+  opacity: 0; /* Hidden initially */
+}
+
+/* Heading and Paragraph */
+.Description h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.Description p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.Description .info {
+  display: flex;
+  flex-direction: column; /* Stack the fields vertically */
+  gap: 10px; /* Add spacing between each item */
+}
+
+.Description .info p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align labels and values */
+  font-size: 18px;
+  color: #444;
+}
+
+.Description .info button {
+  margin-top: 20px; /* Add spacing above the button */
+  align-self: flex-end; /* Align button to the left */
+}
+
+@media (max-width: 768px) {
+  .Description .info {
+    align-items: center; /* Center-align content on small screens */
+  }
+
+  .Description .info button {
+    align-self: center; /* Center button on small screens */
+  }
+}
+
+
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(90deg, #0072ff, #00c6ff); /* Gradient background */
+  border: none;
+  border-radius: 30px; /* Rounded edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover effect */
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Hover Effect */
+.download-btn:hover {
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* Reverse gradient on hover */
+  transform: translateY(-2px); /* Slight upward movement */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow intensity */
+}
+
+/* Active/Click Effect */
+.download-btn:active {
+  transform: translateY(1px); /* Slight downward movement */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
+/* Ripple Effect on Click */
+.download-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.5); /* White ripple */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.download-btn:active::before {
+  width: 300px; /* Ripple width */
+  height: 300px; /* Ripple height */
+  opacity: 0; /* Ripple fades away */
+}
+
+
+/* Scroll Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start slightly lower */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move to normal position */
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100px); /* Start off-screen */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Slide to normal position */
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Profile {
+    flex-direction: column; /* Stack image and description */
+    text-align: center;
+  }
+
+  .Profile img {
+    transform: translateX(0); /* No off-screen for small screens */
+  }
+
+  .Description .info p {
+    flex-direction: column;
+    text-align: center; /* Center-align on small screens */
+  }
+
+  .Description .info p strong,
+  .Description .info p span {
+    text-align: center; /* Ensure labels and values are centered */
+  }
+
+  .Description .info p::after {
+    margin: 5px 0; /* Adjust spacing for small screens */
+  }
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Row styles */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Box styles */
+.box {
+  width: 25%;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px); /* Slightly lift the box on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Image styling */
+.box-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 35px;/* Ensures the image fits the box properly */
+  padding: 30px;
+}
+
+/* Description styling */
+.box-description {
+  padding: 30px;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .box {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 100%;
+  }
+}
+
+   
+
+
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.marquee-container {
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: #f8f9fa;
+      padding: 20px 10px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Marquee animation */
+    .marquee {
+      display: inline-flex;
+      animation: scroll-right 20s linear infinite;
+    }
+
+    /* Stop animation when hovering over the marquee */
+    .marquee-container:hover .marquee {
+      animation-play-state: paused;
+    }
+
+    /* Keyframes for marquee animation */
+    @keyframes scroll-right {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* Individual item container */
+    .marquee-item {
+      position: relative;
+      text-align: center;
+      margin: 0 20px;
+      display: inline-block;
+    }
+
+    /* Images inside the marquee */
+    .marquee img {
+      height: 100px;
+      width: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hover effect for images */
+    .marquee img:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Text below the image */
+    .marquee-text {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Show text on hover */
+    .marquee-item:hover .marquee-text {
+      opacity: 1;
+    }
+
+    .timeline_area {
+    position: relative;
+    z-index: 1;
+}
+.single-timeline-area {
+    position: relative;
+    z-index: 1;
+    padding-left: 180px;
+}
+@media only screen and (max-width: 575px) {
+    .single-timeline-area {
+        padding-left: 100px;
+    }
+}
+.single-timeline-area .timeline-date {
+    position: absolute;
+    width: 180px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding-right: 60px;
+}
+@media only screen and (max-width: 575px) {
+    .single-timeline-area .timeline-date {
+        width: 100px;
+    }
+}
+.single-timeline-area .timeline-date::after {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    content: "";
+    background-color: #ebebeb;
+    top: 0;
+    right: 30px;
+    z-index: 1;
+}
+.single-timeline-area .timeline-date::before {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #f1c40f;
+    content: "";
+    top: 50%;
+    right: 26px;
+    z-index: 5;
+    margin-top: -5.5px;
+}
+.single-timeline-area .timeline-date p {
+    margin-bottom: 0;
+    color: #020710;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.single-timeline-area .single-timeline-content {
+    position: relative;
+    z-index: 1;
+    padding: 30px 30px 25px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+    box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+    border: 1px solid #ebebeb;
+}
+@media only screen and (max-width: 575px) {
+    .single-timeline-area .single-timeline-content {
+        padding: 20px;
+    }
+}
+.single-timeline-area .single-timeline-content .timeline-icon {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    width: 30px;
+    height: 30px;
+    background-color: #f1c40f;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30px;
+    flex: 0 0 30px;
+    text-align: center;
+    max-width: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.single-timeline-area .single-timeline-content .timeline-icon i {
+    color: #ffffff;
+    line-height: 30px;
+}
+.single-timeline-area .single-timeline-content .timeline-text h6 {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+.single-timeline-area .single-timeline-content .timeline-text p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.single-timeline-area .single-timeline-content:hover .timeline-icon,
+.single-timeline-area .single-timeline-content:focus .timeline-icon {
+    background-color: #020710;
+}
+.single-timeline-area .single-timeline-content:hover .timeline-text h6,
+.single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+    color: #3f43fd;
+}
+
+
+
+  /* Back-to-Top Button Styling */
+  #back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #575452;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1000;
+  }
+
+  /* Icon Inside the Button */
+  #back-to-top .icon {
+    font-size: 1.5rem;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  /* Hidden "Back to Top" Text */
+  #back-to-top .text {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Hover Effects */
+  #back-to-top:hover {
+    width: 140px; /* Expand horizontally */
+    background-color: #444;
+    border-radius: 25px; /* Oval shape when expanded */
+  }
+
+  #back-to-top:hover .icon {
+    transform: rotate(-90deg); /* Rotate arrow for effect */
+  }
+
+  #back-to-top:hover .text {
+    opacity: 1; /* Show "Back to Top" text */
+  }
+  html {
+  scroll-behavior: smooth;
+}
+#aboutme {
+  scroll-margin-top: 70px; /* Adjust based on navbar height */
+}
+.projects,.contact{
+
+  text-align: center;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 20px;
+
+}
+#projects,#resume,#contact{
+  scroll-margin-top: 70px;
+}
+/* Main container */
+
+h2 {
+    font-size: 2.5rem;
+    color: #fec544;
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    width: 90%;
+    background: #ffffff00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+/* Form Styles */
+form {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+    border-left: 4px solid #fec544;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: border-color 0.3s;
+    color: white;
+    font-weight: 900;
+}
+
+input:focus, textarea:focus {
+    border-color: #fec544;
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+button {
+    background-color: #fec544;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #fec544;
+    box-shadow: 0 0 10px rgb(106, 105, 107);
+}
+
+/* Contact Info Styles */
+.contact-info {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    padding-left: 20px;
+    border-left: 2px solid #ddd;
+}
+
+.footer-address, .footer-social-media {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-address h5, .footer-social-media h5 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #fec544;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-address p {
+    font-size: 1.2rem;
+    color: #000000;
+    margin: 5px 0;
+    font-weight: bolder;
+}
+
+.footer-address p i {
+    margin-right: 10px;
+    color: #fec544;
+}
+.footer-address i:hover {
+    background: #ffffff;
+    color: #fec544; /* Add a color change for the icon */
+    border-radius: 50%; /* Add rounded effect */
+    padding: 5px; /* Add a slight padding */
+    box-shadow: 0 0 8px rgba(4, 4, 4, 0.7), 0 0 15px rgba(254, 197, 68, 0.5); /* Add green glow */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Social Media */
+.footer-social-media {
+    text-align: left;
+}
+
+.socialicons {
+    display: flex;
+    gap: 10px;
+}
+
+.socialicon {
+    text-decoration: none;
+    color: white;
+    background: #fec544;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.socialicon:hover {
+    background: #f4c850;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #ffffff;
+    font-size: 1.1rem;
+    color: #000000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer .developer {
+    font-weight: bold;
+    color: #fec544;
+    transition: text-shadow 0.3s;
+}
+
+footer .developer:hover {
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+    
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    form, .contact-info {
+        flex: 1 1 100%;
+        text-align: left;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Logesh Nalliyappan</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 220px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#aboutme">About</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#resume">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#contact">Contact</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+      <br><br>
+    
+   
+       <!-- Section with Image and Text -->
+       <div class="content-section">
+       
+        <div class="text-content">
+            <h1>Hello, I am <span class="highlight-name">Logesh Nalliyappan</span></h1>
+            <p>Software Engineer | Network Engineer | Web Developer | Proficient in Java & SQL | Passionate about Cybersecurity & Automation</p>
+        </div>
+      </div>
+      
+
+
+      <div class="social-media-section">
+        <a href="https://wa.me/7339055427?text=Hi" target="_blank" class="social-icon whatsapp">
+          <i class="fab fa-whatsapp"></i>
+          <span class="platform-name">WhatsApp</span>
+        </a>
+        <a href="https://www.instagram.com/logesh_sk_0108?igsh=MW82NTh0NGF2MzR4Yw==" target="_blank" class="social-icon instagram">
+          <i class="fab fa-instagram"></i>
+          <span class="platform-name">Instagram</span>
+        </a>
+        <a href="https://www.linkedin.com/in/logesh-n-72531b285/" target="_blank" class="social-icon linkedin">
+          <i class="fab fa-linkedin"></i>
+          <span class="platform-name">LinkedIn</span>
+        </a>
+        <a href="https://github.com/Logesh0108" target="_blank" class="social-icon github">
+          <i class="fab fa-github"></i>
+          <span class="platform-name">GitHub</span>
+        </a>
+        <a href="mailto:logeshnalliyappan@gmail.com" class="social-icon gmail" target="_blank">
+            <i class="fas fa-envelope"></i>
+            <span class="platform-name">Gmail</span>
+          </a>
+      </div>
+      <div id="aboutme" class="aboutme">
+        <h2>ABOUT ME</h2>
+      </div>
+      
+      <div class="Profile">
+        <!-- Left Side: Image -->
+        <img src="src/Profile.jpeg" alt="Profile Image">
+      
+        <!-- Right Side: Text Description -->
+        <div class="Description">
+          <h1>Hi There! I'm Logesh</h1>
+          <p>
+            Passionate and dedicated IT professional with experience in network engineering and web development. 
+            Throughout my career, I’ve been actively involved in troubleshooting network and hardware issues, 
+            designing automated workflows, and improving business processes through innovative technologies.
+          </p>
+          <div class="info">
+            <p><strong>Birthday :</strong> <span>&nbsp;August 1, 2002</span></p>
+            <p><strong>Phone :</strong> <span>&nbsp;+91 7339055427</span></p>
+            <p><strong>Email :</strong> <span>&nbsp;logeshnalliyappan@gmail.com</span></p>
+            <p><strong>From :</strong> <span>&nbsp;Namakkal, Tamilnadu</span></p>
+            <p><strong>Languages :</strong> <span>&nbsp;English, Tamil</span></p>
+            <!-- Button placed directly below Languages -->
+            <button onclick="window.open('Logesh N CV.pdf', '_blank');" class="download-btn">
+              <i class="fas fa-download"></i> Download CV
+            </button>
+          </div>
+        </div>
+      </div>
+      
+    
+   
+  </div>
+</div>
+
+
+
+<br><br>
+<br>
+<div class="projects">
+<h2 id="projects">PROJECTS</h2>
+</div>
+
+<div class="container">
+  <!-- Row 1 -->
+  <div class="row">
+    <div class="box">
+      <img src="src/image.png" alt="Project 1" class="box-image">
+      <p>
+        <strong>E Notes Application</strong>
+      </p>
+      <p class="box-description">
+        Developed the eNotes application using JSP, JDBC, HTML, CSS, and JavaScript, ensuring seamless user experiences.
+      </p>
+    </div>
+    <div class="box">
+      <img src="src/generic_banner_Ind.png" alt="Project 2" class="box-image">
+      <p>
+        <strong>Bus Ticket Booking System</strong>
+      </p>
+      <p class="box-description">
+        Created a Sign Language Translator named "Beyond Words," leveraging AI to improve accessibility.
+      </p>
+    </div>
+    <div class="box">
+      <img src="src/beyond words.jpg" alt="Project 3" class="box-image">
+      <p>
+        <strong>Sign Language Translator</strong>
+      </p>
+      <p class="box-description">
+        Designed and implemented a Mentor Management System to streamline communication and task assignment.
+      </p>
+    </div>
+    
+  </div>
+</div>
+<br>
+
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">MY SKILLS</h2>
+  <div class="marquee-container">
+    <!-- Marquee Content -->
+    <div class="marquee">
+      <!-- Each item -->
+      <div class="marquee-item">
+        <img src="src/JAVA.png" alt="Java">
+        <p class="marquee-text">JAVA</p>
+      </div>
+      <div class="marquee-item">
+        <img src="src/html.png" alt="HTML">
+        <p class="marquee-text">HTML</p>
+      </div>
+      <div class="marquee-item">
+        <img src="src/css-3.png" alt="CSS">
+        <p class="marquee-text">CSS</p>
+      </div>
+      <div class="marquee-item">
+        <img src="src/js.png" alt="JavaScript">
+        <p class="marquee-text">JavaScript</p>
+      </div>
+      <div class="marquee-item">
+        <img src="src/php.png" alt="PHP">
+        <p class="marquee-text">PHP</p>
+      </div>
+      <div class="marquee-item">
+        <img src="src/mysql.png" alt="MySQL">
+        <p class="marquee-text">MySQL</p>
+      </div>
+      <div class="marquee-item">
+        <img src="src/computer.png" alt="Networking">
+        <p class="marquee-text">Networking</p>
+      </div>
+      <div class="marquee-item">
+        <img src="src/os.png" alt="Operating Systems">
+        <p class="marquee-text">Operating Systems</p>
+      </div>
+      <div class="marquee-item">
+        <img src="src/motherboard.png" alt="Hardware">
+        <p class="marquee-text">Hardware and Troubleshooting</p>
+      </div>
+      <div class="marquee-item">
+        <img src="src/office.png" alt="MS Office">
+        <p class="marquee-text">MS Office</p>
+      </div>
+    </div>
+  </div>
+</div>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<section class="timeline_area section_padding_130">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-lg-6">
+                <!-- Section Heading-->
+                <div class="section_heading text-center">
+                    <h2 id="resume" class="resume">RESUME</h2>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <!-- Timeline Area-->
+                <div class="apland-timeline-area">
+                    <!-- Single Timeline Content-->
+                  
+                    <div class="single-timeline-area">  <h4>EDUCATION</h4>
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>2020 - 2024</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>B.Tech Artificial Intelligence and Data Science</h6>
+                                        <strong>KSRCT</strong>
+                                        <p><B>CGPA : 8.91</B></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                           
+                        </div>
+                    </div>
+                    <!-- Single Timeline Content-->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>2019 - 2020</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-book" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                      <h6>HSC</h6>
+                                      <strong>Sri Vidya Mandir Matric Hr Sec School</strong>
+                                      <p><B>Percentage : 73.5%</B></p>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <!-- Single Timeline Content-->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>2018 - 2019</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                      <h6>SSLC</h6>
+                                      <strong>Sri Vidya Mandir Matric Hr Sec School</strong>
+                                      <p><B>Percentage : 89.8%</B></p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="timeline_area section_padding_130">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-12 col-sm-8 col-lg-6">
+              <!-- Section Heading-->
+              <div class="section_heading text-center">
+                  <div class="line"></div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12">
+              <!-- Timeline Area-->
+              <div class="apland-timeline-area">
+                
+                  <div class="single-timeline-area">  <h4>INTERNSHIPS</h4>
+                      <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                          <p>2024</p>
+                      </div>
+                      <div class="row">
+                          <div class="col-12 col-md-6 col-lg-12">
+                              <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                  <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                                  <div class="timeline-text">
+                                      <h6>Network Engineer Intern-Trainee</h6>
+                                      <strong>Pallavaa Groups</strong>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                         
+                      </div>
+                  </div>
+                  <!-- Single Timeline Content-->
+                  <div class="single-timeline-area">
+                      <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                          <p>2023</p>
+                      </div>
+                      <div class="row">
+                          <div class="col-12 col-md-6 col-lg-12">
+                              <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                  <div class="timeline-icon"><i class="fa fa-book" aria-hidden="true"></i></div>
+                                  <div class="timeline-text">
+                                    <h6>Salesforce Virtual Internship</h6>
+                                    <p><B>Through Online</B></p>
+                                  </div>
+                              </div>
+                          </div>
+                         
+                      </div>
+                  </div>
+                  
+                 
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+ 
+</section>
+<h2 class="heading" >Stay Connected</h2>
+<main>
+  <div class="contact-container">
+      <form action="#" method="post">
+          <h2>just Say HI</h2>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">
+          <div class="footer-address">
+              <h5>Contact Address</h5><p><i class="fas fa-envelope"></i> logeshnalliyappan@gmail.com</p>
+              <p><i class="fas fa-phone-alt"></i> +91 7339055427</p>
+              <p><i class="fas fa-map-marker-alt"></i>Namakkal, Tamil Nadu</p>
+              
+              
+          </div>
+          <div class="footer-socialmedia">
+              <h5>Social Media</h5>
+              <div class="socialicons">
+                  <a href="https://www.instagram.com/logesh_sk_0108?igsh=MW82NTh0NGF2MzR4Yw==" target="_blank" class="socialicon"><i class="fab fa-instagram"></i></a>
+                  <a href="https://github.com/Logesh0108" target="_blank" class="socialicon"><i class="fab fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/logesh-n-72531b285/" target="_blank" class="socialicon"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://wa.me/7339055427?text=Hi" target="_blank"" class="socialicon"><i class="fab fa-whatsapp"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>
+<footer class="footer">
+  <p>&copy; 2024 | All Rights Reserved | Designed and Developed by <span class="developer">Logesh.</span></p>
+</footer>
+    
+
+</div>
+<!-- Back to Top Button -->
+<div id="back-to-top">
+  <span class="icon">↑</span>
+  <span class="text">Back to Top</span>
+</div>
+
+
+
+<script>
+  // Smooth Scroll to Top Functionality
+  document.getElementById("back-to-top").addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+  });
+
+  // Show the button only when scrolled down
+  window.addEventListener("scroll", function () {
+    const button = document.getElementById("back-to-top");
+    if (window.scrollY > 300) {
+      button.style.display = "flex"; // Show button when scrolled
+    } else {
+      button.style.display = "none"; // Hide button at the top
+    }
+  });
+</script>
+
+
+<!-- End of .container -->
+      
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   
+</body>
+</html>
