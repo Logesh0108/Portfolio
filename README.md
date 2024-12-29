@@ -1,0 +1,1 @@
+Welcome to the portfolio of Logesh N, an IT professional and web developer. This site showcases my skills in web development (HTML, CSS, JavaScript), AI, Data Science, and networking. It highlights my experience in building applications and solving real-world problems through innovative technologies.
