@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logesh Nalliyappan |   Software Developer</title>
-    <link rel="icon" type="image/png" href="curriculum.png">
+    <link rel="icon" type="image/png" href="src/curriculum.png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -474,29 +474,71 @@
   border-radius: 10px;
   text-align: center;
   overflow: hidden;
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .box:hover {
-  transform: translateY(-10px); /* Slightly lift the box on hover */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Image styling */
-.box-image {
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Adjusted shadow values */
+}
+
+/* Project image container */
+.project-image-container {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 35px;/* Ensures the image fits the box properly */
-  padding: 30px;
+  height: 200px;
+  overflow: hidden;
 }
 
-/* Description styling */
+.box-image {
+    width: fit-content;
+    height: 90%;
+    object-fit: cover;
+}
+/* Description container */
 .box-description {
-  padding: 30px;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
   font-size: 14px;
-  color: #333;
   font-weight: bold;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: top 0.3s ease;
+  text-align: left;
+}
+
+.box:hover .box-description {
+  top: 0;
+}
+
+/* Link styling */
+.icon-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.icon-links a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.icon-links a:hover {
+  color: #e56f00; /* Highlight color on hover */
+}
+.container{
+    box-shadow: rgb(0, 0, 0) ;
 }
 
 /* Responsive design */
@@ -1104,7 +1146,7 @@ footer .developer:hover {
             <p><strong>From :</strong> <span>&nbsp;Namakkal, Tamilnadu</span></p>
             <p><strong>Languages :</strong> <span>&nbsp;English, Tamil</span></p>
             <!-- Button placed directly below Languages -->
-            <button onclick="window.open('Logesh N CV.pdf', '_blank');" class="download-btn">
+            <button onclick="window.open('src/Logesh N CV.pdf', '_blank');" class="download-btn">
               <i class="fas fa-download"></i> Download CV
             </button>
           </div>
@@ -1125,36 +1167,62 @@ footer .developer:hover {
 </div>
 
 <div class="container">
-  <!-- Row 1 -->
   <div class="row">
-    <div class="box">
-      <img src="src/image.png" alt="Project 1" class="box-image">
-      <p>
-        <strong>E Notes Application</strong>
-      </p>
-      <p class="box-description">
-        Developed the eNotes application using JSP, JDBC, HTML, CSS, and JavaScript, ensuring seamless user experiences.
-      </p>
+      <!-- Box 1 -->
+      <div class="box">
+          <div class="project-image-container">
+              <img src="src/image.png" alt="Project 1" class="box-image">
+          </div>
+          <div class="box-description">
+              <strong style="color: #b27f07;">E Notes Application</strong><br>
+              Developed the eNotes application using JSP, JDBC, HTML, CSS, and JavaScript, ensuring seamless user experiences.
+              <div class="icon-links">
+                  <a href="https://github.com/Logesh0108/E-Notes-Application" target="_blank"><i class="fas fa-link"></i></a>
+                  <a href="https://github.com/Logesh0108/E-Notes-Application" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+          </div>
+      </div>
+      <!-- Box 2 -->
+      <div class="box">
+          <div class="project-image-container">
+              <img src="src/generic_banner_Ind.png" alt="Project 2" class="box-image">
+          </div>
+          <div class="box-description">
+              <strong style="color: #fec544;">Bus Ticket Booking System</strong><br>
+              Created a bus tickect booking system and to check the availability of the seats available in the command line.
+              <div class="icon-links">
+                  <a href="https://github.com/Logesh0108/Bus-Reservation-System" target="_blank"><i class="fas fa-link"></i></a>
+                  <a href="https://github.com/Logesh0108/Bus-Reservation-System" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+          </div>
+      </div>
+      <!-- Box 3 -->
+      <div class="box">
+          <div class="project-image-container">
+              <img src="src/beyond words.jpg" alt="Project 3" class="box-image">
+          </div>
+          <div class="box-description">
+              <strong style="color: #fec544;">Sign Language Translator</strong><br>
+              Developed an AI-powered sign language translator, to enhance communication accessibility and promote inclusivity for individuals with hearing impairments.
+              <div class="icon-links">
+                  <a href="https://github.com/Logesh0108/" target="_blank"><i class="fas fa-link"></i></a>
+                  <a href="https://github.com/Logesh0108/" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="box">
+        <div class="project-image-container">
+            <img src="src/beyond words.jpg" alt="Project 3" class="box-image">
+        </div>
+        <div class="box-description">
+            <strong style="color: #fec544;">Personal Portfolio</strong><br>
+            I created my personal website to highlight my skills, projects, and experiences while providing a platform to connect and share my work.
+                        <div class="icon-links">
+                <a href="https://logesh0108.github.io/Portfolio/" target="_blank"><i class="fas fa-link"></i></a>
+                <a href="https://github.com/Logesh0108/Portfolio" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
     </div>
-    <div class="box">
-      <img src="src/generic_banner_Ind.png" alt="Project 2" class="box-image">
-      <p>
-        <strong>Bus Ticket Booking System</strong>
-      </p>
-      <p class="box-description">
-        Created a Sign Language Translator named "Beyond Words," leveraging AI to improve accessibility.
-      </p>
-    </div>
-    <div class="box">
-      <img src="src/beyond words.jpg" alt="Project 3" class="box-image">
-      <p>
-        <strong>Sign Language Translator</strong>
-      </p>
-      <p class="box-description">
-        Designed and implemented a Mentor Management System to streamline communication and task assignment.
-      </p>
-    </div>
-    
   </div>
 </div>
 <br>
@@ -1320,6 +1388,7 @@ footer .developer:hover {
                                   <div class="timeline-text">
                                       <h6>Network Engineer Intern-Trainee</h6>
                                       <strong>Pallavaa Groups</strong>
+                                      <p>sdhbhsaf</p>
                                   </div>
                               </div>
                           </div>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Project Card</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Row styles */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Box styles */
+.box {
+  width: 25%;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Adjusted shadow values */
+}
+
+/* Project image container */
+.project-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.box-image {
+    width: fit-content;
+    height: 90%;
+    object-fit: cover;
+}
+/* Description container */
+.box-description {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: top 0.3s ease;
+  text-align: left;
+}
+
+.box:hover .box-description {
+  top: 0;
+}
+
+/* Link styling */
+.icon-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.icon-links a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.icon-links a:hover {
+  color: #fec544; /* Highlight color on hover */
+}
+.container{
+    box-shadow: rgb(0, 0, 0) ;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .box {
+    width: 32%;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Box 1 -->
+            <div class="box">
+                <div class="project-image-container">
+                    <img src="src/image.png" alt="Project 1" class="box-image">
+                </div>
+                <div class="box-description">
+                    <strong>E Notes Application</strong><br>
+                    Developed the eNotes application using JSP, JDBC, HTML, CSS, and JavaScript, ensuring seamless user experiences.
+                    <div class="icon-links">
+                        <a href="link-to-enotes" target="_blank"><i class="fas fa-link"></i></a>
+                        <a href="link-to-github-enotes" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="box">
+                <div class="project-image-container">
+                    <img src="src/generic_banner_Ind.png" alt="Project 2" class="box-image">
+                </div>
+                <div class="box-description">
+                    <strong>Bus Ticket Booking System</strong><br>
+                    Created a Sign Language Translator named "Beyond Words," leveraging AI to improve accessibility.
+                    <div class="icon-links">
+                        <a href="link-to-bus-ticket" target="_blank"><i class="fas fa-link"></i></a>
+                        <a href="link-to-github-bus-ticket" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="box">
+                <div class="project-image-container">
+                    <img src="src/beyond words.jpg" alt="Project 3" class="box-image">
+                </div>
+                <div class="box-description">
+                    <strong>Sign Language Translator</strong><br>
+                    Designed and implemented a Mentor Management System to streamline communication and task assignment.
+                    <div class="icon-links">
+                        <a href="link-to-sign-language" target="_blank"><i class="fas fa-link"></i></a>
+                        <a href="link-to-github-sign-language" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
